@@ -12,6 +12,7 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Gerente fez login com sucesso!</h1>
+        <h1>Bem-vindo, Gerente!</h1>
+        <button onclick="window.location.href='telas_gerente/montarCalendario.jsp'">Montar calendário</button>
     </body>
 </html>

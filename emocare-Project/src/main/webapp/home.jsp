@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Login feito com sucesso!</h1>
+        <button onclick="window.location.href='telas_cliente/agendarConsulta.jsp'">Agendar consulta</button>
     </body>
 </html>

@@ -42,32 +42,25 @@ public class LoginServlet extends HttpServlet {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
         
-            try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar a senha para fazer conexão ao mysql
-                    PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM tbl_usuarios WHERE email = ? AND senha = ?")){
+            try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Mudar a senha para fazer conexão ao mysql
+                PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM tbl_usuarios WHERE email = ? AND senha = ?")){
                 preparedStatement.setString(1, email);
                 preparedStatement.setString(2, senha);
                 ResultSet resultSet = preparedStatement.executeQuery();
 
-                /*if(resultSet.next()){
-                    HttpSession session = request.getSession();
-                    session.setAttribute("usuario", resultSet.getString("nome"));
-                    System.out.println("Login feito com sucesso!");
-                    response.sendRedirect("home.jsp");
-                }else{
-                    response.sendRedirect("login.jsp?error=true");
-                }*/
-
                 if(resultSet.next()){
                     int userId = resultSet.getInt("id_usuario");
                     String userName = resultSet.getString("nome");
-
+                    
+                    // Inicia a sessão e definir atributos
+                    HttpSession session = request.getSession();
+                    session.setAttribute("usuario", userName);
+                    session.setAttribute("id_paciente", userId);
+                    
                     // Verificar a especialidade do usuário na tbl_funcionarios
                     PreparedStatement funcStmt = connection.prepareStatement("SELECT especialidade FROM tbl_funcionarios WHERE id_funcionario = ?");
                     funcStmt.setInt(1, userId);
                     ResultSet funcResultSet = funcStmt.executeQuery();
-
-                    HttpSession session = request.getSession();
-                    session.setAttribute("usuario", userName);
 
                     if(funcResultSet.next()){
                         String especialidade = funcResultSet.getString("especialidade");

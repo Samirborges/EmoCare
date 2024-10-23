@@ -37,8 +37,8 @@ public class CadastroServlet extends HttpServlet {
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");  // Certifique-se de que o driver está sendo carregado
-            try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar senha para conectar no banco de dados
-                 PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO tbl_usuarios (nome, email, senha, data_cadastramento) VALUES (?, ?, ?, ?)")) {
+            try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Mudar senha para conectar no banco de dados
+                PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO tbl_usuarios (nome, email, senha, data_cadastramento) VALUES (?, ?, ?, ?)")) {
                 preparedStatement.setString(1, nome);
                 preparedStatement.setString(2, email);
                 preparedStatement.setString(3, senha);

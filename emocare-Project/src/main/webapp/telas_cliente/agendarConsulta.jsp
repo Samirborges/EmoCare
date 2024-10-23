@@ -23,7 +23,7 @@
                     ResultSet rs = null;
                     try {
                         Class.forName("com.mysql.cj.jdbc.Driver");
-                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha");
+                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar senha para conectar no banco de dados
 
                         // Consulta para buscar dias e horários disponíveis
                         String query = "SELECT tbl_dias_consultas.id_dia, tbl_dias_consultas.data_dia, tbl_horarios_disponiveis.id_horario, tbl_horarios_disponiveis.horario, tbl_horarios_disponiveis.turno " +
@@ -55,6 +55,18 @@
                     }
                 %>
             </select>
+            
+            
+            <!-- Novo campo para o cliente escolher o tipo de tratamento-->
+            <label for="tipoTratamento">Escolha o tipo de tratamento:</label>
+            <select id="tipoTratamento" name="tipoTratamento" required>
+                <option value="Ansiedade">Ansiedade</option>
+                <option value="Depressão">Depressão</option>
+                <option value="Estresse">Estresse</option>
+                <option value="Autoestima">Baixa Autoestima</option>
+                <option value="Outro">Outro</option>
+            </select>
+            
             
             <button type="submit">Agendar</button>
         </form>

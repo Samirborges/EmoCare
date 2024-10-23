@@ -1,3 +1,5 @@
+package com;
+
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -26,6 +28,7 @@ public class AgendarConsultaServlet extends HttpServlet {
         String[] consultaSelecionada = request.getParameter("consulta").split("-");
         int idDia = Integer.parseInt(consultaSelecionada[0]);
         int idHorario = Integer.parseInt(consultaSelecionada[1]); // Pegar o horário selecionado
+        String tipoTratamento = request.getParameter("tipoTratamento");
         int idPaciente = (int) session.getAttribute("id_paciente");
         
         Connection connection = null;
@@ -33,14 +36,15 @@ public class AgendarConsultaServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar senha para conectar no banco de dados
 
             // Inserir na tabela tbl_consultas_marcadas
-            String query = "INSERT INTO tbl_consultas_marcadas (id_dia_consulta, horario_agendado, id_paciente) VALUES (?, ?, ?)";
+            String query = "INSERT INTO tbl_consultas_marcadas (id_dia_consulta, horario_agendado, id_paciente, tipo_tratamento) VALUES (?, ?, ?, ?)";
             stmt = connection.prepareStatement(query);
             stmt.setInt(1, idDia);
             stmt.setInt(2, idHorario);  // Inserir o horário agendado
             stmt.setInt(3, idPaciente);
+            stmt.setString(4, tipoTratamento);
             stmt.executeUpdate();
 
             response.sendRedirect("agendarConsulta.jsp?success=true");

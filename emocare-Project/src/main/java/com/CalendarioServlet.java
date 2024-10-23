@@ -28,7 +28,7 @@ public class CalendarioServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Mudar senha para conectar no banco de dados
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar senha para conectar no banco de dados
 
             // Inserir na tabela tbl_dias_consultas
             String insertDiaQuery = "INSERT INTO tbl_dias_consultas (data_dia) VALUES (?)";

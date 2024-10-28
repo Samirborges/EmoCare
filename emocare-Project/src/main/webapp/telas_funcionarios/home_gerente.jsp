@@ -13,6 +13,7 @@
     </head>
     <body>
         <h1>Bem-vindo, Gerente!</h1>
-        <button onclick="window.location.href='telas_gerente/montarCalendario.jsp'">Montar calendário</button>
+        <button onclick="window.location.href='telas_gerente/montarCalendario.jsp'">Montar calendário</button> <br>
+        <button onclick="window.location.href='telas_gerente/adicionarFuncionario.jsp'">Adicionar funcionário</button>
     </body>
 </html>

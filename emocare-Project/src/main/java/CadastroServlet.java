@@ -26,14 +26,19 @@ public class CadastroServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
-        System.out.println("Entrou no método doPost");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String nome = request.getParameter("nome");
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
+        String confirmaSenha = request.getParameter("confirma-senha");
         LocalDate dataCadastro = LocalDate.now();
         
-        System.out.println("Dados recebidos: Nome=" + nome +", Email=" + email + ", Senha=" + senha + ", Data de Cadastro=" + dataCadastro);
+         if (!senha.equals(confirmaSenha)) {
+            // Se as senhas não coincidirem, redireciona de volta ao formulário de cadastro com uma mensagem de erro
+            request.setAttribute("erroSenha", "As senhas não coincidem. Tente novamente.");
+            request.getRequestDispatcher("cadastro.jsp").forward(request, response);
+            return;
+        }
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");  // Certifique-se de que o driver está sendo carregado

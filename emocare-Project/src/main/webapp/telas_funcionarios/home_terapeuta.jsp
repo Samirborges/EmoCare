@@ -13,5 +13,7 @@
     </head>
     <body>
         <h1>Terapeuta fez login com sucesso!</h1>
+        <button onclick="window.location.href='tela_terapeuta/consultasTerapeuta.jsp'">Alocar consulta</button> <br>
+        <button onclick="window.location.href='tela_terapeuta/consultasParaTerapeuta.jsp'">Suas consultas</button> 
     </body>
 </html>

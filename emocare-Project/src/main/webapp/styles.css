@@ -1,0 +1,130 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 26 de out. de 2024, 07:17:59
+    Author     : anaxi
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #98ffbf;
+}
+
+/* Container principal */
+.login-container {
+    display: flex;
+    width: 36%; 
+    background-color: #F5F5DC;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 32px 36px;
+    background-color: #F5F5DC;
+    flex-direction: column;
+    justify-content: center;
+    text-align: flex;
+}
+
+.logo img {
+    width: 18%;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.login-box h1 {
+    color: #7f3d3d;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: left;
+  
+}
+
+.login-box h2 {
+    color: #000000;
+    margin-top: -10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+}
+
+/* Inputs */
+.login-box input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    color: #333;
+    position: flex;
+}
+
+.login-senha input:focus {
+    outline: none;
+    border-color: #7f3d3d;
+}
+
+/* Link "Esqueci a senha" */
+.login-esqueci {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+.button-nova button {
+    padding: 14px;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.registre-btn {
+    background-color: #7f3d3d;
+    color: white;
+    border: none;
+}
+
+.login-btn {
+    background-color: #dfdfdf;
+    color: #7f3d3d;
+    border: none;
+}
+
+.button-nova .registre-btn:hover {
+    background-color: #dfdfdfdf;
+    color: #7f3d3d;
+    border: 2px solid #7f3d3d;
+}
+
+.button-nova .login-btn:hover {
+    background-color: #7f3d3d; 
+    color: #ffffff; 
+}
+
+/* Seção da Imagem */
+.imagem-container {
+    width: 48%;
+    height: 100vh;
+    background: url('img_1.png') no-repeat center center; 
+    background-size: contain;
+}

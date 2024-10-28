@@ -65,11 +65,14 @@ public class LoginServlet extends HttpServlet {
                     if(funcResultSet.next()){
                         String especialidade = funcResultSet.getString("especialidade");
                         if("gerente".equalsIgnoreCase(especialidade)){
+                            session.setAttribute("id_gerente", userId); // Definir atributo de gerente
                             response.sendRedirect("telas_funcionarios/home_gerente.jsp");
                         } else if ("terapeuta".equalsIgnoreCase(especialidade)){
+                            session.setAttribute("id_terapeuta", userId); // Definir atributos de terapeuta
                             response.sendRedirect("telas_funcionarios/home_terapeuta.jsp");
                         }
                     } else{
+                        session.setAttribute("id_usuario", userId);
                         response.sendRedirect("home.jsp");
                     }
                 } else{

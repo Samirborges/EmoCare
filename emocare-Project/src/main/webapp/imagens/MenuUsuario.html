@@ -1,11 +1,3 @@
-<%-- 
-    Document   : home
-    Created on : 18 de out. de 2024, 10:45:22
-    Author     : anaxi
---%>
-
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmoCare - Menu</title>
     <style>
+        /* Adicionando a fonte Canvas */
         @font-face {
             font-family: 'Canvas';
             src: url('Canvas.otf') format('truetype');
@@ -27,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 40px; 
             margin-top: 50px;
         }
         .card {
@@ -50,7 +43,7 @@
             color: #5E2C1C;
         }
         .card img {
-            width: 80px;
+            width: 80px; 
             height: 80px;
             margin-bottom: 15px;
         }
@@ -84,7 +77,7 @@
             color: #ffffff;
         }
         .avisos h2, .avisos p {
-            color: #ffffff;
+            color: #ffffff; 
         }
         .user-info {
             display: flex;
@@ -107,7 +100,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            margin-bottom: 60px;
+            margin-bottom: 60px; 
         }
         .header img {
             width: 100px;
@@ -119,10 +112,10 @@
         }
        
         .menu-title {
-            font-family: 'Canvas', sans-serif;
+            font-family: 'Canvas', sans-serif; /* Aplicando a fonte Canvas */
             font-size: 4em;
             color: #5E2C1C;
-            margin-top: 50px;
+            margin-top: 50px; 
         }
         .header {
             display: flex;
@@ -130,15 +123,16 @@
             align-items: center;
         }
         .header img {
-            margin-right: 10px;
+            margin-right: 10px; 
         }
     </style>
 </head>
 <body>
 
     <div class="user-info">
-        <a href="${pageContext.request.contextPath}/perfil.jsp">
-            <img src="imagens/IconeUsuario.webp" alt="Avatar do usuário">
+        <!-- Link para a página de perfil do usuário -->
+        <a href="perfil.html">
+            <img src="pyton/html/Img/IconeUsuario.webp" alt="Avatar do usuário">
         </a>
         <div>
             <p><strong>User001</strong></p>
@@ -147,7 +141,7 @@
     </div>
 
     <div class="header">
-        <img src="imagens/Logo.png" alt="Logo EmoCare">
+        <img src="Logo.png" alt="Logo EmoCare">
         <h2>EmoCare</h2>
     </div>
 
@@ -155,29 +149,29 @@
 
     <div class="menu-container">
         <!-- Link para a página de agendamento -->
-        <a href="${pageContext.request.contextPath}/telas_cliente/agendarConsulta.jsp" class="card realizar-agendamento">
-            <img src="imagens/Calendario.webp" alt="Ícone de Calendário">
+        <a href="agendamento.html" class="card realizar-agendamento">
+            <img src="Calendario.webp" alt="Ícone de Calendário">
             <h2>Realizar Agendamento</h2>
             <p>Agende suas sessões. Aqui você poderá escolher o dia de sua consulta e o que deseja tratar.</p>
         </a>
 
         <!-- Link para a página de dúvidas -->
-        <a href="${pageContext.request.contextPath}/telas_cliente/duvidasCliente.jsp" class="card duvidas">
-            <img src="imagens/Duvida.png" alt="Ícone de Dúvidas">
+        <a href="duvidas.html" class="card duvidas">
+            <img src="Duvida.png" alt="Ícone de Dúvidas">
             <h2>Dúvidas</h2>
             <p>Venha tirar suas dúvidas sobre a terapia, sua mensagem será atendida por um profissional.</p>
         </a>
 
         <!-- Link para a página de consultas marcadas -->
-        <a href="${pageContext.request.contextPath}/telas_cliente/historicoCliente.jsp" class="card consultas-marcadas">
-            <img src="imagens/CRelogio.png" alt="Ícone de Consultas">
+        <a href="consultas.html" class="card consultas-marcadas">
+            <img src="CRelogio.png" alt="Ícone de Consultas">
             <h2>Consultas Marcadas</h2>
             <p>Visualize suas consultas marcadas.</p>
         </a>
 
         <!-- Link para a página de avisos -->
-        <a href="${pageContext.request.contextPath}/telas_cliente/avisosCliente.jsp" class="card avisos">
-            <img src="imagens/Autofalante.png" alt="Ícone de Avisos">
+        <a href="avisos.html" class="card avisos">
+            <img src="Autofalante.png" alt="Ícone de Avisos">
             <h2>Avisos</h2>
             <p>Esteja atento(a) a todas as novidades do EmoCare. Todas as notificações da terapia e novidades estão aqui.</p>
         </a>

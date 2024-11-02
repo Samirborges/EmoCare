@@ -15,6 +15,8 @@ import jakarta.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *
@@ -34,10 +36,32 @@ public class LoginServlet extends HttpServlet {
      */
     private static final long serialVersionUID = 1L;
     
+    //Transforma a senha em seu hash
+    public static String hashSenha(String input) {
+        try {
+            // Escolhendo o algoritmo SHA-256
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+
+            // Cria o hash em bytes e converte para hexadecimal
+            byte[] hashBytes = digest.digest(input.getBytes());
+            StringBuilder hexString = new StringBuilder();
+
+            for (byte b : hashBytes) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Algoritmo de hash não encontrado.", e);
+        }
+    }
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         String email = request.getParameter("email");
-        String senha = request.getParameter("senha");
+        String senha = hashSenha(request.getParameter("senha"));
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");

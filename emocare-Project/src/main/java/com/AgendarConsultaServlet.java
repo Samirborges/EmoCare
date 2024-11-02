@@ -36,7 +36,7 @@ public class AgendarConsultaServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar senha para conectar no banco de dados
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Mudar senha para conectar no banco de dados
 
             // Inserir na tabela tbl_consultas_marcadas
             String query = "INSERT INTO tbl_consultas_marcadas (id_dia_consulta, horario_agendado, id_paciente, tipo_tratamento) VALUES (?, ?, ?, ?)";

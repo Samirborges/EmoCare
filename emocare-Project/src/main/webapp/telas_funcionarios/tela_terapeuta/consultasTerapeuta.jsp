@@ -1,7 +1,7 @@
 <%-- 
     Document   : consultasTerapeuta
     Created on : 24 de out. de 2024, 10:35:15
-    Author     : anaxi
+    Author     : Samir & Guylherme Lyra
 --%>
 
 <%@page import="java.sql.SQLException"%>
@@ -16,12 +16,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Consultas do terapeuta</title>
+        <title>Escolha a consulta</title>
+        <link rel="stylesheet" href="../../styles/style_e.css">
     </head>
     <body>
-        <h1>Escolher Consulta</h1>
+    <div class="exterior">
+        <a href="../home_terapeuta.jsp"><button class="voltar">←</button></a>
+        <h1>Escolha a consulta</h1>
+    </div>
     <form action="ConsultasTerapeutaServlet" method="post">
-        <table border="1">
+    <div class="container">
+        <table>
             <tr>
                 <th>Selecionar</th>
                 <th>Nome do Cliente</th>
@@ -75,7 +80,8 @@
                 }
             %>
         </table>
-        <button type="submit">Escolher Consulta</button>
+        <button type="submit" class="botao-adicionar">Escolher Consulta</button>
+    </div>
     </form>
     </body>
 </html>

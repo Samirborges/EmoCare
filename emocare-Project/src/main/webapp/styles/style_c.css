@@ -1,0 +1,141 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 de nov. de 2024, 20:19:10
+    Author     : Guylherme Lyra
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0ebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    top: -50px; 
+}
+
+.exterior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    top: -50px;
+}
+
+.voltar {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 25px;
+    position: relative; 
+    right: 610px;
+    top: -100px;
+    padding: 5px 10px;
+    background-color: #f8f5e6;
+    color: #7a392f;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.voltar:hover {
+    color: #f8f5e6;
+    background-color: #7a392f;
+}
+
+h1 {
+    font-size: 36px;
+    color: #7a392f;
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.container {
+    text-align: center;
+    background-color: #f8f5e6;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 850px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grupo-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    background-color: #fdfdf6;
+    padding: 15px 25px; 
+    border-radius: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icone-botao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f8f5e6;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icone-botao span {
+    font-size: 1.0em;
+}
+
+.icone-botao input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 120px; 
+    text-align: center;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.turno {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #d3d3d3;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.botao-adicionar {
+    background-color: #7a392f;
+    border: none;
+    padding: 12px 19px;
+    border-radius: 20px;
+    color: #dfdfdf;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.botao-adicionar:hover {
+    background-color: #dfdfdf;
+    color: #7a392f;
+    border: 2px solid #7f3d3d;
+}

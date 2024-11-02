@@ -1,7 +1,7 @@
 <%-- 
     Document   : consultasParaTerapeuta
     Created on : 24 de out. de 2024, 14:46:26
-    Author     : anaxi
+    Author     : Samir & Guylherme Lyra
 --%>
 
 <%@page import="java.sql.SQLException"%>
@@ -17,11 +17,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Consultas Agendadadas</title>
+        <link rel="stylesheet" href="../../styles/style_h.css">
     </head>
     <body>
-        <h1>Consultas Agendadas para o Terapeuta</h1>
+    <div class="exterior">
+        <a href="../home_terapeuta.jsp"><button class="voltar">←</button></a>
+        <h1>Consultas Agendadas</h1>
+    </div>
     <div class="container">
-        <table border="1">
+        <table> <!--border="1"-->
             <tr>
                 <th>Nome do Paciente</th>
                 <th>Data da Consulta</th>
@@ -37,7 +41,7 @@
 
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha");
+                    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Colocar senha do mysql
 
                     // Consulta para buscar as consultas futuras do terapeuta
                     String query = "SELECT tbl_usuarios.nome AS paciente, tbl_dias_consultas.data_dia, " +

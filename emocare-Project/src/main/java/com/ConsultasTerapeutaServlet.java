@@ -42,7 +42,7 @@ public class ConsultasTerapeutaServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa11419"); // Colocar senha do banco de dados
 
             // Inserir a consulta escolhida na tabela tbl_consultas_terapeuta
             String insertQuery = "INSERT INTO tbl_consultas_terapeuta (id_terapeuta, id_dia_consulta) VALUES (?, ?)";

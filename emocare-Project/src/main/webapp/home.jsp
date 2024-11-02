@@ -1,7 +1,7 @@
 <%-- 
     Document   : home
     Created on : 18 de out. de 2024, 10:45:22
-    Author     : anaxi
+    Author     : Samir & Davi
 --%>
 
 

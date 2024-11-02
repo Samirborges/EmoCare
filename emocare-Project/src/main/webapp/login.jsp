@@ -1,7 +1,7 @@
 <%-- 
     Document   : login
     Created on : 17 de out. de 2024, 16:50:09
-    Author     : anaxi
+    Author     : Samir & Guylherme Lyra
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

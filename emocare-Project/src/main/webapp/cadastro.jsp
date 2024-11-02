@@ -1,7 +1,7 @@
 <%-- 
     Document   : cadastro
     Created on : 17 de out. de 2024, 16:39:24
-    Author     : anaxi
+    Author     : Samir & Davi
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

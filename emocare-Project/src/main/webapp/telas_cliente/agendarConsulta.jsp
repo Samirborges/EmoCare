@@ -1,7 +1,7 @@
 <%-- 
     Document   : agendarConsulta
     Created on : 21 de out. de 2024, 15:30:06
-    Author     : anaxi
+    Author     : Samir
 --%>
 
 
@@ -30,7 +30,7 @@
                     ResultSet rs = null;
                     try {
                         Class.forName("com.mysql.cj.jdbc.Driver");
-                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Mudar senha para conectar no banco de dados
+                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Mudar senha para conectar no banco de dados
 
                         // Consulta para buscar dias e horários disponíveis
                         String query = "SELECT tbl_dias_consultas.id_dia, tbl_dias_consultas.data_dia, tbl_horarios_disponiveis.id_horario, tbl_horarios_disponiveis.horario, tbl_horarios_disponiveis.turno " +

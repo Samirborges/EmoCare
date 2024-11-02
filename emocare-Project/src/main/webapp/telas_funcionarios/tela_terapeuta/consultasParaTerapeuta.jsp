@@ -41,7 +41,7 @@
 
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Colocar senha do mysql
+                    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Colocar senha do mysql
 
                     // Consulta para buscar as consultas futuras do terapeuta
                     String query = "SELECT tbl_usuarios.nome AS paciente, tbl_dias_consultas.data_dia, " +

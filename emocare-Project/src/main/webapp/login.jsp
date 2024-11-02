@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <section class="aa">
         <div class="login-container">
             <div class="login-box">
                 <div class="logo">
@@ -39,6 +40,7 @@
                 </form>
             </div>
         </div>  
-        <div class="imagem-container"></div>
+        </section>
+        <section class="imagem-container"></section>
     </body>
 </html>

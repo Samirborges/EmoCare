@@ -36,7 +36,7 @@ public class AdicionarFuncionarioServlet extends HttpServlet {
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "@Sa111419"); // Colocar senha do mysql
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Colocar senha do mysql
             
             //Verifica se o e-mail existe na tabela Tbl_usuarios
             String query = "SELECT id_usuario, nome FROM tbl_usuarios WHERE email = ?";

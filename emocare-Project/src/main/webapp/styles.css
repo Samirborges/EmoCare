@@ -17,22 +17,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: #98ffbf;
+    justify-content: right;
+}
+
+.aa {
     background-color: #98ffbf;
 }
 
 /* Container principal */
 .login-container {
     display: flex;
-    width: 36%; 
+    width: 140%; 
     background-color: #F5F5DC;
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    padding: 32px 36px;
-    background-color: #F5F5DC;
-    flex-direction: column;
-    justify-content: center;
+    padding: 35px 36px;
+    flex-direction: column; 
     text-align: flex;
 }
 
@@ -121,10 +123,12 @@ body {
     color: #ffffff; 
 }
 
-/* Seção da Imagem */
-.imagem-container {
-    width: 48%;
+/*imagem*/
+section.imagem-container {  
+    width: 70%;
     height: 100vh;
-    background: url('img_1.png') no-repeat center center; 
-    background-size: contain;
-}
+    background-image: url(imagens/img_1.png);
+    background-repeat:no-repeat; 
+    background-position: 180px;
+    background-size: cover;
+}  

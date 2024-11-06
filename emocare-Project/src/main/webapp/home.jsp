@@ -136,13 +136,18 @@
 </head>
 <body>
 
+    <% 
+        String nomeUsuario = (String) session.getAttribute("usuario"); //chamando o nome do usuario
+        String emailUsuario = (String) session.getAttribute("email"); //chamando o email do usuario
+    %>
+    
     <div class="user-info">
         <a href="${pageContext.request.contextPath}/perfil.jsp">
             <img src="imagens/IconeUsuario.webp" alt="Avatar do usuário">
         </a>
         <div>
-            <p><strong>User001</strong></p>
-            <p>example@gmail.com</p>
+            <p><strong><%= nomeUsuario %></strong></p>
+            <p><%= emailUsuario %></p>
         </div>
     </div>
 

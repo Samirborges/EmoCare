@@ -16,7 +16,9 @@
         <div class="container">
         <a href="${pageContext.request.contextPath}/home.jsp"><button class="voltar">←</button></a>
         <h1>Avisos</h1>
-        <button class="duvidas">?</button>
+        <button class="duvidas">
+            <img src="../imagens/img_w1.png" alt="WhatsApp" class="whatsapp-icon"/>
+        </button>
         <div class="aviso">
             <div class="texto">
                 <p class="remetente">Nome do remetente</p>

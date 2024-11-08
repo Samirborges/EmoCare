@@ -1,0 +1,150 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 4 de nov. de 2024, 09:47:02
+    Author     : Guylherme Lyra
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0ebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    top: -20px;  
+}
+
+.exterior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.voltar {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 25px;
+    position: relative; 
+    right: 610px;
+    top: 32px;
+    padding: 5px 10px;
+    background-color: #f8f5e6;
+    color: #7a392f;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.voltar:hover {
+    color: #f8f5e6;
+    background-color: #7a392f;
+}
+
+h1 {
+    font-size: 32px;
+    color: #7a392f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    background-color: #f8f5e6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.grupo-botoes {
+    display: grid;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #fdfdf6;
+    padding: 15px 20px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+
+.icone-botao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f8f5e6;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icone-botao span {
+    font-size: 1.0em;
+}
+
+.icone-botao input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 120px;
+    text-align: center;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.turno, .tratamento, .pagamento {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #d3d3d3;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.botao-adicionar {
+    background-color: #7a392f;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    color: #dfdfdf;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.botao-adicionar:hover {
+    background-color: #dfdfdf;
+    color: #7a392f;
+    border: 2px solid #7f3d3d;
+}

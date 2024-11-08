@@ -89,9 +89,14 @@
         .user-info {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
             gap: 10px;
             padding: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .user-info div {
+            text-align: left;
         }
         .user-info img {
             width: 40px;

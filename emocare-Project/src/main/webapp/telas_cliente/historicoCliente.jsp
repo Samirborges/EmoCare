@@ -1,7 +1,7 @@
 <%-- 
     Document   : historicoCliente
     Created on : 24 de out. de 2024, 15:06:20
-    Author     : anaxi
+    Author     : Samir & Guylherme Lyra
 --%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.Time"%>
@@ -16,16 +16,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórico de Consultas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Consultas</title>
+    <link rel="stylesheet" href="style_c.css">
 </head>
 <body>
     <div class="container">
-        <a href="${pageContext.request.contextPath}/home.jsp"><button class="voltar">←</button></a>
+        <!-- Botão de voltar para a página inicial -->
+        <a href="${pageContext.request.contextPath}/home.jsp">
+            <button class="voltar">←</button>
+        </a>
+        
         <h1>Consultas</h1>
         <h2>Marcadas</h2>
-        <button class="duvidas">?</button>
-
+        
+        <!-- Botão para dúvidas com ícone do WhatsApp -->
+        <button class="duvidas">
+            <img src="../imagens/img_w1.png" alt="WhatsApp" class="whatsapp-icon">
+        </button>
+        
         <%
             int idPaciente = (int) session.getAttribute("id_paciente"); // Obtém o ID do cliente logado
             Connection connection = null;
@@ -34,7 +42,7 @@
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Colocar senha do mysql
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Colocar senha do MySQL
 
                 // Consulta para buscar o histórico de consultas do cliente
                 String query = "SELECT tbl_dias_consultas.data_dia, tbl_horarios_disponiveis.horario, tbl_consultas_marcadas.tipo_tratamento, " +
@@ -59,10 +67,11 @@
                     if (terapeuta == null) terapeuta = "Não atribuído";
         %>
         
-        <div class="aviso">
+        <!-- Exibindo cada consulta em uma nova div com estilo adaptado -->
+        <div class="consulta">
             <div class="texto">
                 <p class="horario">Dia <%= dataConsulta %> horário <%= horario %></p>
-                <p class="tratamento">Tipo de tratamento: <%= tipoTratamento %></p> <br> 
+                <p class="tratamento">Tipo de tratamento: <%= tipoTratamento %></p> </br>
                 <p class="terapeuta">Terapeuta: <%= terapeuta %></p>
             </div>
             <button class="botao">Ver mais</button>

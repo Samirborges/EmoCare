@@ -39,22 +39,6 @@
                     </div>
                     <button type="submit" class="botao-adicionar">Adicionar</button>
                 </div>
-                <!--
-                <label for="data">Data:</label> 
-                <input type="date" id="data" name="data" required>
-                
-                <label for="horario">Selecione o Horário:</label>
-                <input type="time" id="horario" name="horario" required>
-                
-                <label for="turno">Turno:</label>
-                <select id="turno" name="turno" required>
-                    <option value="manhã">Manhã</option>
-                    <option value="tarde">Tarde</option>
-                    <option value="noite">Noite</option>
-                </select>
-                
-                <button type="submit">Adicionar Consulta</button>
-                -->
             </form>
         </div>
     </body>

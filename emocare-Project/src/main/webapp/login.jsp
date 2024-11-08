@@ -18,7 +18,7 @@
         <div class="login-container">
             <div class="login-box">
                 <div class="logo">
-                    <img src="imagens/Logo.png" alt="Logo EmoCare"/>
+                    <img src="imagens/img_2.png" alt="Logo EmoCare"/>
                     <h1><strong>EmoCare</strong></h1>
                     <h2>Login</h2>
                     <hr>

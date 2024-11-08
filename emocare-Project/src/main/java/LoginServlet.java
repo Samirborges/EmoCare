@@ -75,10 +75,12 @@ public class LoginServlet extends HttpServlet {
                 if(resultSet.next()){
                     int userId = resultSet.getInt("id_usuario");
                     String userName = resultSet.getString("nome");
+                    String userEmail = resultSet.getString("email"); // Recupera o email do usuário
                     
                     // Inicia a sessão e definir atributos
                     HttpSession session = request.getSession();
                     session.setAttribute("usuario", userName);
+                    session.setAttribute("email", userEmail); // Armazena o email do usuário na sessão
                     session.setAttribute("id_paciente", userId);
                     
                     // Verificar a especialidade do usuário na tbl_funcionarios

@@ -44,14 +44,17 @@
                     connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbemocare", "root", "senha"); // Inserir senha do mysql
 
                     // Buscar as consultas marcadas
-                    String query = "SELECT tbl_consultas_marcadas.id_consultas_marcadas, tbl_usuarios.nome AS cliente, tbl_dias_consultas.data_dia, " +
-                                   "tbl_horarios_disponiveis.horario, tbl_consultas_marcadas.tipo_tratamento " +
-                                   "FROM tbl_consultas_marcadas " +
-                                   "INNER JOIN tbl_dias_consultas ON tbl_consultas_marcadas.id_dia_consulta = tbl_dias_consultas.id_dia " +
-                                   "INNER JOIN tbl_horarios_disponiveis ON tbl_consultas_marcadas.horario_agendado = tbl_horarios_disponiveis.id_horario " +
-                                   "INNER JOIN tbl_usuarios ON tbl_consultas_marcadas.id_paciente = tbl_usuarios.id_usuario " +
-                                   "WHERE tbl_consultas_marcadas.id_consultas_marcadas NOT IN (SELECT id_dia_consulta FROM tbl_consultas_terapeuta)"; // Apenas consultas ainda não atendidas
+                    String query = "SELECT tbl_consultas_marcadas.id_consultas_marcadas, tbl_usuarios.nome AS cliente, " +
+               "tbl_dias_consultas.data_dia, tbl_horarios_disponiveis.horario, " +
+               "tbl_consultas_marcadas.tipo_tratamento " +
+               "FROM tbl_consultas_marcadas " +
+               "INNER JOIN tbl_dias_consultas ON tbl_consultas_marcadas.id_dia_consulta = tbl_dias_consultas.id_dia " +
+               "INNER JOIN tbl_horarios_disponiveis ON tbl_consultas_marcadas.horario_agendado = tbl_horarios_disponiveis.id_horario " +
+               "INNER JOIN tbl_usuarios ON tbl_consultas_marcadas.id_paciente = tbl_usuarios.id_usuario " +
+               "WHERE tbl_consultas_marcadas.id_consultas_marcadas NOT IN (SELECT id_dia_consulta FROM tbl_consultas_terapeuta) " +
+               "AND tbl_dias_consultas.data_dia >= CURDATE();";
 
+               
                     stmt = connection.prepareStatement(query);
                     rs = stmt.executeQuery();
 

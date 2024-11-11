@@ -21,22 +21,22 @@
         </button>
         <div class="aviso">
             <div class="texto">
-                <p class="remetente">Nome do remetente</p>
-                <p class="previa">Prévia da mensagem</p>
+                <p class="remetente">EmoCare</p>
+                <p class="previa">Parabéns, sua consulta foi agendada com sucesso!</p>
             </div>
             <button class="botao">Ver mais</button>
         </div>
         <div class="aviso">
             <div class="texto">
-                <p class="remetente">Nome do remetente</p>
-                <p class="previa">Prévia da mensagem</p>
+                <p class="remetente">EmoCare</p>
+                <p class="previa">Parabéns, sua consulta foi agendada com sucesso!</p>
             </div>
             <button class="botao">Ver mais</button>
         </div>
         <div class="aviso">
             <div class="texto">
-                <p class="remetente">Nome do remetente</p>
-                <p class="previa">Prévia da mensagem</p>
+                <p class="remetente">EmoCare</p>
+                <p class="previa">Parabéns, sua consulta foi agendada com sucesso!</p>
             </div>
             <button class="botao">Ver mais</button>
         </div>

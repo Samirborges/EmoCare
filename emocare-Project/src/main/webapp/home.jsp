@@ -172,7 +172,7 @@
         </a>
 
         <!-- Link para a página de dúvidas -->
-        <a href="${pageContext.request.contextPath}/telas_cliente/duvidasCliente.jsp" class="card duvidas">
+        <a href="https://w.app/EmoCare" class="card duvidas">
             <img src="imagens/Duvida.png" alt="Ícone de Dúvidas">
             <h2>Dúvidas</h2>
             <p>Venha tirar suas dúvidas sobre a terapia, sua mensagem será atendida por um profissional.</p>
